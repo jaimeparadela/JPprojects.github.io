@@ -14,6 +14,6 @@ FILES (organized in folders):
 
   Monte Carlo: Option pricing by Monte Carlo method. Both in 
   
-                - Discrete time.
-                - Continuous time (by making use of Euler discretization).
+  - Discrete time.
+  - Continuous time (by making use of Euler discretization).
 
