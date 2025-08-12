@@ -8,12 +8,13 @@ We present some simple projects about the mathematics of financial markets (in p
 
 FILES (organized in folders): 
 
-  - Main: Two main theory files Main Discrete and Main Continuous which contain some basic concepts related to discrete and continuous market models.
+ - Main: Two main theory files Main Discrete and Main Continuous which contain some basic concepts related to discrete and continuous market models.
     
  - Discretization SDEs: A theory file introducing the Euler discretization of (certain) SDEs and the Euler-Maruyama Theorem on the convergence of this discretization. We also include some code files in which we implement this technique.
 
  - Monte Carlo: Option pricing by Monte Carlo method. Both in 
   
       - Discrete time.
-       - Continuous time (by making use of Euler discretization).
+      - Continuous time (by making use of Euler discretization).
+   
 
