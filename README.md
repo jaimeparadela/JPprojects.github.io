@@ -12,3 +12,7 @@ FILES (organized in folders):
     
   Discretization SDEs: A theory file introducing the Euler discretization of (certain) SDEs and the Euler-Maruyama Theorem on the convergence of this discretization. We also include some code files in which we implement this technique.
 
+  Monte Carlo: Option pricing by Monte Carlo method. Both in 
+                - Discrete time.
+                - Continuous time (by making use of Euler discretization).
+
