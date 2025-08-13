@@ -10,12 +10,15 @@ We present some simple projects about the mathematics of financial markets (in p
 FILES (organized in folders): 
 
  - Main: Two main theory files Main Discrete and Main Continuous which contain some basic concepts related to discrete and continuous market models.
+
+ - Tree-like models: Some discrete market models (binomial, trinomial) for pricing European and American options.
     
  - Discretization SDEs: A theory file introducing the Euler discretization of (certain) SDEs and the Euler-Maruyama Theorem on the convergence of this discretization. We also include some code files in which we implement this technique.
 
- - Monte Carlo: Option pricing by Monte Carlo method. Both in 
-  
-      - Discrete time.
-      - Continuous time (by making use of Euler discretization).
+ - Discretization PDEs: Basic implementations of finite difference methods (Euler scheme, Thomas algorithm for tridiagonal system). A good reference to study convergence is Strikwerda's book.
+
+ - Monte Carlo: Option pricing by Monte Carlo method for financial markets in continuous time (by making use of Euler discretization).
+
+ - Pseudorandom number generation: Linear congruential generators for generation of pseudorandom numbers (key for Monte Carlo simulations). Implementation of the LLL algorithm for the shortest vector problem and implementation of the spectral test.
    
 
