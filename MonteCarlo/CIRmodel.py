@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 
     #Approach1: via discretization
     #Approach2: exact simulation
+    #Approach3: exact formula
 
 
 
@@ -27,6 +28,7 @@ def EulerFellerSQRT(r0, T, a,b, sigma, n, N):
     for t in range(1, n + 1):
         r[t] = r[t-1]+a*(b-r[t])*dt +  sigma* np.sqrt(r[t-1]*dt) * np.random.standard_normal(N)
     return r #time array of interest rates
+
 
 
 
@@ -69,10 +71,17 @@ def MCtransition(r0, T, a,b, sigma, n, N):
     B=np.exp(-sum(r)*T/n)        #Bond prices individual paths following CIR model
     return np.mean(B),B        #B and Expectation approx.
 
-    
-    
-                         
 
+
+
+
+'''APPROACH 3'''
+                         
+def BPRICE(r0,T,a,b,sigma,n):
+    h=np.sqrt(a**2+2*sigma**2)
+    A=((2*h*np.exp((a+h)*T/2))/(2*h+(a+h)*(np.exp(h*T)-1)))**(2*a*b/sigma**2)
+    B=2*(np.exp(h*T)-1)/(2*h+(a+h)*(np.exp(h*T)-1))
+    return A*np.exp(-B*r0)
                     
                            
 
@@ -94,9 +103,11 @@ N = 300000
 
 MCBond,B_discr=MCdiscretized(r0, T, a,b, sigma, n, N)
 MCBond2,B_trans=MCtransition(r0, T, a,b, sigma, n, N)
+MCBond3=BPRICE(r0, T, a,b, sigma, n)
 
 print('Price Bond with approach 1', MCBond)
 print('Price Bond with approach 2', MCBond2)
+print('Exact Price Bond', MCBond3)
 
 
 
